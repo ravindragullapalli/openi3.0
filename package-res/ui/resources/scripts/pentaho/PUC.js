@@ -18,7 +18,12 @@ function RepositoryBrowserControllerProxy() {
 }
 
 function handle_puc_save(path, filename, overwrite) {
-		OpenIAnalysis.save(pivotID, filename, "", path, "", overwrite);
+		try{
+			OpenIAnalysis.save(pivotID, filename, "", path, "", overwrite);
+			return "OK";
+		}catch(e){
+			return "ERROR";
+		}
 }
 // this is a required object
 function WaqrProxy() {
