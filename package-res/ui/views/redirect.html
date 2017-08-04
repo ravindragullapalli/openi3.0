@@ -5,6 +5,7 @@
             var location = document.location.pathname;
             var pathArray = (location + "").split("/");
             var path = pathArray[pathArray.length - 2].replace(/:/g, "/");
+			path = path.replace(/%3A/g, "/");
             var mode = pathArray[pathArray.length - 1];
             
 
